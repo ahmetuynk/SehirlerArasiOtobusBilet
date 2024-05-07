@@ -15,3 +15,5 @@
 -Sefer sistemden tamamen kaldırılabilir
 
 *Bilet Kontrol/Sorgu panelinde Ad Soyad, Kalkış-Varış Yönü ve TC Kimlik Numarasına göre bilet sorgulaması yapılabilir. Sorgulanan bilete ait detaylı bilgiler görüntülenebilir.
+
+*Bütün işlemler gerçekleşmeden önce kontrol ediliir ve olası hatalar önlenerek yanlış veya eksik işlem yapılması engellenir.
