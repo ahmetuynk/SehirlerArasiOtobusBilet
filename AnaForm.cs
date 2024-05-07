@@ -17,9 +17,10 @@ namespace YolcuBiletSistemi
         {
             InitializeComponent();
         }
-
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-GO1G284\\SQLEXPRESS;Initial Catalog=YolcuBilet;Integrated Security=True");
-        string connString = "Data Source=DESKTOP-GO1G284\\SQLEXPRESS;Initial Catalog = YolcuBilet; Integrated Security = True";
+        
+        //PROJEYİ TEST EDEBİLMEK İÇİN KENDI SUNUCU ADINIZI GİRİN:
+        SqlConnection conn = new SqlConnection("//Data Source =/*KENDİ SUNUCU ADINIZ*/; Initial Catalog = YolcuBilet; Integrated Security = True");
+        string connString = "//Data Source =/*KENDİ SUNUCU ADINIZ*/; Initial Catalog = YolcuBilet; Integrated Security = True";
 
         void SeferListele()
         {
@@ -118,6 +119,7 @@ namespace YolcuBiletSistemi
             lblKoltukBilgi.Text = "";
             cmbKalkis.Text = "";
             cmbVaris.Text = "";
+            txtSeferAra.Text = "";
             btnBiletIptal.Enabled = false;
             butonInaktif();
         }
@@ -165,7 +167,7 @@ namespace YolcuBiletSistemi
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.Read())
                     {
-                        lblKoltukBilgi.Text = dr[0].ToString();
+                        lblKoltukBilgi.Text = "YOLCU: "+dr[0];
                     }
                 }
             }
@@ -196,7 +198,7 @@ namespace YolcuBiletSistemi
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    lblSefer.Text = (dr["KALKIS"] + "-" + dr["VARIS"] + " " + dr["SAAT"]).ToUpper();
+                    lblSefer.Text = ("sefer:"+" "+dr["KALKIS"] + "-" + dr["VARIS"] + " " + dr["SAAT"]).ToUpper();
                 }
                 conn.Close();
             }
@@ -363,6 +365,7 @@ namespace YolcuBiletSistemi
                 MessageBox.Show("Sefer iptal edilmiştir");
             }
             txtRzvSeferNo.Text = "";
+            Temizle();
         }
 
         private void btnSeferAktiflestir_Click(object sender, EventArgs e)
@@ -377,6 +380,7 @@ namespace YolcuBiletSistemi
             }
             SeferListele();
             txtRzvSeferNo.Text = "";
+            Temizle();
         }
 
         private void btnDoluSeferler_Click(object sender, EventArgs e)
@@ -404,6 +408,7 @@ namespace YolcuBiletSistemi
             }
             txtRzvSeferNo.Text = "";
             SeferListele();
+            Temizle();
         }
 
         private void btnBosSeferler_Click(object sender, EventArgs e)

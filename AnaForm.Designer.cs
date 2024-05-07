@@ -33,7 +33,6 @@
             this.btnBiletIptal = new System.Windows.Forms.Button();
             this.lblKoltukBilgi = new System.Windows.Forms.Label();
             this.lblSefer = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.K11 = new System.Windows.Forms.Button();
             this.K8 = new System.Windows.Forms.Button();
@@ -46,6 +45,7 @@
             this.K9 = new System.Windows.Forms.Button();
             this.K6 = new System.Windows.Forms.Button();
             this.K3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
             this.btnKaydet = new System.Windows.Forms.Button();
@@ -61,7 +61,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cmbVaris = new System.Windows.Forms.ComboBox();
             this.cmbKaptan = new System.Windows.Forms.ComboBox();
+            this.cmbKalkis = new System.Windows.Forms.ComboBox();
             this.btnSeferOlstr = new System.Windows.Forms.Button();
             this.txtFiyat = new System.Windows.Forms.TextBox();
             this.mskSaat = new System.Windows.Forms.MaskedTextBox();
@@ -71,8 +73,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtVaris = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtVaris = new System.Windows.Forms.TextBox();
             this.txtKalkis = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnKaptanEkle = new System.Windows.Forms.Button();
@@ -94,8 +96,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnSeferler_Tarih = new System.Windows.Forms.Button();
-            this.cmbKalkis = new System.Windows.Forms.ComboBox();
-            this.cmbVaris = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -152,20 +152,11 @@
             // 
             this.lblSefer.AutoSize = true;
             this.lblSefer.ForeColor = System.Drawing.Color.White;
-            this.lblSefer.Location = new System.Drawing.Point(38, 20);
+            this.lblSefer.Location = new System.Drawing.Point(17, 20);
             this.lblSefer.Name = "lblSefer";
             this.lblSefer.Size = new System.Drawing.Size(0, 26);
             this.lblSefer.TabIndex = 22;
             this.lblSefer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(1380, 207);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(28, 30);
-            this.textBox1.TabIndex = 21;
-            this.textBox1.Visible = false;
             // 
             // label19
             // 
@@ -308,6 +299,15 @@
             this.K3.TabIndex = 1;
             this.K3.Text = "3";
             this.K3.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(1380, 207);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(28, 30);
+            this.textBox1.TabIndex = 21;
+            this.textBox1.Visible = false;
             // 
             // groupBox2
             // 
@@ -463,6 +463,36 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
+            // cmbVaris
+            // 
+            this.cmbVaris.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVaris.FormattingEnabled = true;
+            this.cmbVaris.Items.AddRange(new object[] {
+            "İstanbul",
+            "İzmir",
+            "Ankara",
+            "Antalya",
+            "Adana",
+            "Afyon",
+            "Aydın",
+            "Balıkesir",
+            "Bodrum",
+            "Bursa",
+            "Çanakkale",
+            "Denizli",
+            "Eskişehir",
+            "Fethiye",
+            "Gebze",
+            "Göreme",
+            "Kayseri",
+            "Konya",
+            "Samsun",
+            "Uşak"});
+            this.cmbVaris.Location = new System.Drawing.Point(148, 79);
+            this.cmbVaris.Name = "cmbVaris";
+            this.cmbVaris.Size = new System.Drawing.Size(177, 34);
+            this.cmbVaris.TabIndex = 19;
+            // 
             // cmbKaptan
             // 
             this.cmbKaptan.FormattingEnabled = true;
@@ -470,6 +500,36 @@
             this.cmbKaptan.Name = "cmbKaptan";
             this.cmbKaptan.Size = new System.Drawing.Size(177, 34);
             this.cmbKaptan.TabIndex = 17;
+            // 
+            // cmbKalkis
+            // 
+            this.cmbKalkis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKalkis.FormattingEnabled = true;
+            this.cmbKalkis.Items.AddRange(new object[] {
+            "İstanbul",
+            "İzmir",
+            "Ankara",
+            "Antalya",
+            "Adana",
+            "Afyon",
+            "Aydın",
+            "Balıkesir",
+            "Bodrum",
+            "Bursa",
+            "Çanakkale",
+            "Denizli",
+            "Eskişehir",
+            "Fethiye",
+            "Gebze",
+            "Göreme",
+            "Kayseri",
+            "Konya",
+            "Samsun",
+            "Uşak"});
+            this.cmbKalkis.Location = new System.Drawing.Point(148, 31);
+            this.cmbKalkis.Name = "cmbKalkis";
+            this.cmbKalkis.Size = new System.Drawing.Size(177, 34);
+            this.cmbKalkis.TabIndex = 18;
             // 
             // btnSeferOlstr
             // 
@@ -552,14 +612,6 @@
             this.label9.TabIndex = 7;
             this.label9.Text = "VARIŞ:";
             // 
-            // txtVaris
-            // 
-            this.txtVaris.Location = new System.Drawing.Point(1133, 213);
-            this.txtVaris.Name = "txtVaris";
-            this.txtVaris.Size = new System.Drawing.Size(177, 30);
-            this.txtVaris.TabIndex = 6;
-            this.txtVaris.Visible = false;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -568,6 +620,14 @@
             this.label8.Size = new System.Drawing.Size(92, 26);
             this.label8.TabIndex = 5;
             this.label8.Text = "KALKIŞ:";
+            // 
+            // txtVaris
+            // 
+            this.txtVaris.Location = new System.Drawing.Point(1133, 213);
+            this.txtVaris.Name = "txtVaris";
+            this.txtVaris.Size = new System.Drawing.Size(177, 30);
+            this.txtVaris.TabIndex = 6;
+            this.txtVaris.Visible = false;
             // 
             // txtKalkis
             // 
@@ -786,66 +846,6 @@
             this.btnSeferler_Tarih.Text = "Tarihe Göre Göster";
             this.btnSeferler_Tarih.UseVisualStyleBackColor = false;
             this.btnSeferler_Tarih.Click += new System.EventHandler(this.btnSeferler_Tarih_Click);
-            // 
-            // cmbKalkis
-            // 
-            this.cmbKalkis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbKalkis.FormattingEnabled = true;
-            this.cmbKalkis.Items.AddRange(new object[] {
-            "İstanbul",
-            "İzmir",
-            "Ankara",
-            "Antalya",
-            "Adana",
-            "Afyon",
-            "Aydın",
-            "Balıkesir",
-            "Bodrum",
-            "Bursa",
-            "Çanakkale",
-            "Denizli",
-            "Eskişehir",
-            "Fethiye",
-            "Gebze",
-            "Göreme",
-            "Kayseri",
-            "Konya",
-            "Samsun",
-            "Uşak"});
-            this.cmbKalkis.Location = new System.Drawing.Point(148, 31);
-            this.cmbKalkis.Name = "cmbKalkis";
-            this.cmbKalkis.Size = new System.Drawing.Size(177, 34);
-            this.cmbKalkis.TabIndex = 18;
-            // 
-            // cmbVaris
-            // 
-            this.cmbVaris.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbVaris.FormattingEnabled = true;
-            this.cmbVaris.Items.AddRange(new object[] {
-            "İstanbul",
-            "İzmir",
-            "Ankara",
-            "Antalya",
-            "Adana",
-            "Afyon",
-            "Aydın",
-            "Balıkesir",
-            "Bodrum",
-            "Bursa",
-            "Çanakkale",
-            "Denizli",
-            "Eskişehir",
-            "Fethiye",
-            "Gebze",
-            "Göreme",
-            "Kayseri",
-            "Konya",
-            "Samsun",
-            "Uşak"});
-            this.cmbVaris.Location = new System.Drawing.Point(148, 79);
-            this.cmbVaris.Name = "cmbVaris";
-            this.cmbVaris.Size = new System.Drawing.Size(177, 34);
-            this.cmbVaris.TabIndex = 19;
             // 
             // AnaForm
             // 

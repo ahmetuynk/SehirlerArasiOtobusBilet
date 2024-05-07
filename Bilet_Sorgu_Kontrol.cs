@@ -18,8 +18,8 @@ namespace YolcuBiletSistemi
         {
             InitializeComponent();
         }
-
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-GO1G284\\SQLEXPRESS;Initial Catalog=YolcuBilet;Integrated Security=True");
+        //PROJEYİ TEST EDEBİLMEK İÇİN KENDI SUNUCU ADINIZI GİRİN:
+        SqlConnection conn = new SqlConnection("//Data Source =/*KENDİ SUNUCU ADINIZ*/; Initial Catalog = YolcuBilet; Integrated Security = True");
 
         private void txtAdSoyad_TextChanged(object sender, EventArgs e) //İsme göre bilet sorgusu
         {
@@ -65,6 +65,11 @@ namespace YolcuBiletSistemi
             txtAdSoyad.Text = "";
             mskTCNO.Text = "";
             txtKalkisVaris.Text = "";
+        }
+
+        private void Bilet_Sorgu_Kontrol_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

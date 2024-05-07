@@ -218,6 +218,7 @@
             this.Name = "Bilet_Sorgu_Kontrol";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bilet Kontrol / Sorgu";
+            this.Load += new System.EventHandler(this.Bilet_Sorgu_Kontrol_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
